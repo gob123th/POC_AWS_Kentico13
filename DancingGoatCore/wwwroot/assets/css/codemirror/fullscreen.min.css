@@ -1,0 +1,77 @@
+.CodeMirror-fullscreen {
+    position: fixed !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    height: 100% !important;
+    z-index: 99999;
+    background: #282c34; /* Dark background */
+}
+.CodeMirror-fullscreen {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100% !important;
+    z-index: 999999;
+    background: #282c34; /* Dark background */
+}
+.fullscreen-btn {
+    background: #babec3;
+    color: #2B3E50;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    padding: 0 10px;
+}
+.exit-fullscreen-btn {
+    background: #babec3;
+    color: #2B3E50;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    margin-right: 10px;
+    padding: 0 10px;
+    z-index: 1000000;
+}
+.autoFormatRange-btn {
+    background: #babec3;
+    color: #2B3E50;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    padding: 0 10px;
+}
+.autoFormatRange-full-btn {
+    background: #babec3;
+    color: #2B3E50;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    margin-right: 50px;
+    padding: 0 10px;
+    z-index: 1000000;
+}

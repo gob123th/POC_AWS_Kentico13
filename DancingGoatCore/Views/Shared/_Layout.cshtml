@@ -34,6 +34,18 @@
     @Html.Kentico().ActivityLoggingScript()
     @Html.Kentico().WebAnalyticsLoggingScript()
     <page-builder-styles />
+    <link href="@(Url.Content("~/assets/css/codemirror/codemirror.min.css"))" rel="stylesheet" />
+    <link href="@(Url.Content("~/assets/css/codemirror/lucario.min.css"))" rel="stylesheet" />
+    <link href="@(Url.Content("~/assets/css/codemirror/fullscreen.min.css"))" rel="stylesheet" />
+
+    <script src="@(Url.Content("~/assets/js/siteEditor.js"))"></script>
+    <script src="@(Url.Content("~/assets/js/plugin/codemirror/codemirror.min.js"))"></script>
+    <script src="@(Url.Content("~/assets/js/plugin/codemirror/xml.min.js"))"></script>
+    <script src="@(Url.Content("~/assets/js/plugin/codemirror/javascript.min.js"))"></script>
+    <script src="@(Url.Content("~/assets/js/plugin/codemirror/css.min.js"))"></script>
+    <script src="@(Url.Content("~/assets/js/plugin/codemirror/htmlmixed.min.js"))"></script>
+    <script src="@(Url.Content("~/assets/js/plugin/codemirror/fullscreen.min.js"))"></script>
+    <script src="@(Url.Content("~/assets/js/plugin/codemirror/formatting.js"))"></script>
 </head>
 <body class="@ViewData["PageClass"]">
     <div class="page-wrap">
