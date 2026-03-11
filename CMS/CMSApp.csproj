@@ -1158,6 +1158,7 @@
     <Content Include="CMSModules\Content\Controls\Attachments\DocumentAttachments\Transformations\AttachmentSize.ascx" />
     <Content Include="CMSModules\Content\Controls\Dialogs\Selectors\LinkMediaSelector\ContentListView_LinkSelect.xml" />
     <Content Include="CMSModules\Content\Controls\Filters\FormerUrlsFilter.ascx" />
+    <Content Include="CMSModules\CustomizationModule\PartnerList\PartnerList_Export.aspx" />
     <Content Include="CMSModules\DataProtection\Controls\DefaultDataSubjectIdentifiersFilter.ascx" />
     <Content Include="CMSModules\DataProtection\Controls\DefaultErasureConfiguration.ascx" />
     <Content Include="CMSModules\DataProtection\Pages\ConsentArchive_Detail.aspx" />
@@ -3827,6 +3828,13 @@
     </Compile>
     <Compile Include="CMSModules\Content\Controls\TreeLanguageMenu.ascx.designer.cs">
       <DependentUpon>TreeLanguageMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\CustomizationModule\PartnerList\PartnerList_Export.aspx.cs">
+      <DependentUpon>PartnerList_Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\CustomizationModule\PartnerList\PartnerList_Export.aspx.designer.cs">
+      <DependentUpon>PartnerList_Export.aspx</DependentUpon>
     </Compile>
     <Compile Include="CMSModules\DataProtection\Controls\DefaultDataSubjectIdentifiersFilter.ascx.cs">
       <DependentUpon>DefaultDataSubjectIdentifiersFilter.ascx</DependentUpon>
@@ -14493,7 +14501,6 @@
   <ItemGroup>
     <Folder Include="CMSModules\EmailEngine\FormControls\" />
     <Folder Include="CMSScripts\Custom\" />
-    <Folder Include="CMSScripts\WebComponents\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CMSScripts\WebComponents\components.esm.js" />
