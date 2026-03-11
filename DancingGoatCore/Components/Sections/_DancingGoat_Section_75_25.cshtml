@@ -4,12 +4,10 @@
 
 <div class="row row--with-cols-padding @Model.Properties.Theme">
     <div class="col-md-9">
-        <widget-zone zone-name="@ZoneRestrictions.MAIN_ZONE_NAME"
-                     allowed-widgets="ZoneRestrictions.GetWideZoneRestrictions()" />
+        <widget-zone zone-name="@ZoneRestrictions.MAIN_ZONE_NAME" />
     </div>
     <div class="col-md-3">
-        <widget-zone zone-name="@ZoneRestrictions.SIDE_PANEL_ZONE_NAME"
-                     allowed-widgets="ZoneRestrictions.GetNarrowZoneRestrictions()" />
+        <widget-zone zone-name="@ZoneRestrictions.SIDE_PANEL_ZONE_NAME" />
     </div>
 </div>
 
