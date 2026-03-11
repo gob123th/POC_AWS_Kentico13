@@ -1,0 +1,82 @@
+﻿@using CMS.Localization
+@using CMS.MacroEngine
+@using Kentico.PageBuilder.Web.Mvc
+@using Kentico.Web.Mvc
+@using MvcApp.Widgets
+@model RichTextsWidgetViewModel
+
+@{
+    bool editMode = Context.Kentico().PageBuilder().EditMode;
+    string id;
+    System.Reflection.PropertyInfo prop = Model.GetType().GetProperty(name: "WidgetInstanceId");
+    if (prop != null)
+    {
+        object val = prop.GetValue(Model);
+        if (val is Guid g)
+        {
+            id = g.ToString("N");
+        }
+        else
+        {
+            id = (val?.ToString() ?? Guid.NewGuid().ToString(format: "N")).Replace(oldValue: "-", newValue: "");
+        }
+    }
+    else
+    {
+        id = Guid.NewGuid().ToString("N");
+    }
+    var currentCulture = System.Globalization.CultureInfo.CurrentCulture.Name;
+
+    var settings = new CMS.MacroEngine.MacroSettings { Culture = currentCulture };
+
+}
+
+
+@{
+    async Task RenderComponent()
+    {
+
+
+        @if (editMode)
+        {
+            <script>
+                registerInlineEditor("@(id)-editor", {
+                    elementId: "@(id)_contentDisplay",
+                    type: "textarea",
+                    propertyName: "RichTexts"
+                });
+            </script>
+            @using (Html.Kentico().BeginInlineEditor(id + "-editor", "RichTexts"))
+            {
+                <div id="@(id)_contentDisplay" class="contentDisplay" temp="@Model.RichTexts" onclick="editMode('@(id)')">
+
+                    @if (Model.ExceptionMessage != null || Model.ExceptionMessage != string.Empty)
+                    {
+                        <center> @Model.ExceptionMessage</center>
+                    }
+                    else
+                    {
+                        <center><i style="padding-right:10px" class="fa-solid fa-pen-to-square"></i>@("Rich Text Editor " +
+                                    (id != null ? "Name:" + id : ""))</center>
+                    }
+                </div>
+            }
+            @if (Model.isEnableRichTextMode)
+            {
+                Html.Kentico().RichTextEditor("RichTexts");
+            }
+            else
+            {
+                @Html.Raw(MacroResolver.Resolve(Model.RichTexts, settings))
+            }
+        }
+        else
+        {
+            @Html.Raw(MacroResolver.Resolve(Model.RichTexts, settings))
+        }
+    }
+}
+
+@{
+    await RenderComponent();
+}
