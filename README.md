@@ -1,4 +1,5 @@
 POC AWS Kentico 13
+
 📌 **Overview**
 This project was created as a Proof of Concept (POC) to support AWS initiatives in using AI to automatically convert existing codebases into Kentico Xperience 13-compatible applications.
 
