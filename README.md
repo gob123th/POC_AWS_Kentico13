@@ -24,7 +24,7 @@ This project was created as a **Proof of Concept (POC)** to support AWS initiati
 
 1.  **Clone Repository**
     ```bash
-    git clone https://github.com/gob123th/POC_AWS_Kentico13.git](https://github.com/gob123th/POC_AWS_Kentico13.git
+    git clone https://github.com/gob123th/POC_AWS_Kentico13.git
     cd POC_AWS_Kentico13
     ```
 
