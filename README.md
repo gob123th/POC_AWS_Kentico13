@@ -7,7 +7,6 @@ This project was created as a Proof of Concept (POC) to support AWS initiatives 
 Kentico Xperience 13
 ASP.NET MVC / .NET Framework (or .NET Core if applicable)
 Microsoft SQL Server
-AWS Services (EC2, RDS, S3, CloudFront)
 
 🚀 **Getting Started**
 Prerequisites
